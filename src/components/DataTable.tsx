@@ -6,7 +6,7 @@ import { DataGrid, GridColDef } from '@mui/x-data-grid';
 import { useGetData } from '../custom_hooks/FetchData';
 
 const columns: GridColDef[] =[
-    { field: 'id', headerName: "ID", width: 90, hide: true},
+    { field: 'id', headerName: "ID", width: 45, hide: true},
     {field: 'make', headerName: 'Make', flex: 1},
     {field: 'model', headerName: 'Model', flex: 1},
     {field: 'price', headerName: 'Price', flex: 1},
@@ -39,7 +39,7 @@ function DataTable() {
             open={open}
             onClose={handleClose}
         />
-        <div className="flex flex-row justify-center">
+        <div className="flex flex-row justify-center ">
             <div>
                 <Button
                     className="p-3 bg-red-300 rounded m-3 hover:bg-pink-800 hover:text-white"
@@ -61,11 +61,11 @@ function DataTable() {
                 </Button>
             </div>
         </div>
-        <div className={ open ? "hidden" : "container mx-10 my-5 flex flex-col"}
+        <div className={ open ? "hidden" : "  w-full px-5my-5 flex flex-col items-center "}
             style={{ height: 400, width: '100%'}}
         >
-            <h2 className="p-3 bg-red-400 my-2 rounded">My Contacts</h2>
-            <DataGrid className='bg-red-200 rounded ' rows={vehicleData} columns={columns} rowsPerPageOptions={[5]}
+            <h2 className="p-3 bg-red-400 my-2 rounded w-full ">My Contacts</h2>
+            <DataGrid className='bg-red-200 rounded w-full ' rows={vehicleData} columns={columns} rowsPerPageOptions={[5]}
             checkboxSelection={true} 
             onSelectionModelChange={ (item:any) => {
                 setSelectionModel(item)

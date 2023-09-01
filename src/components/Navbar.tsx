@@ -26,7 +26,7 @@ function Navbar() {
 
 
     return (
-        <nav className='flex items-center justify-between flex-wrap bg-red-400 p-6'>
+        <nav className='flex items-center justify-between flex-wrap bg-red-400 p-6 fixed w-full'>
             <div className='flex items-center flex-shrink-0 text-pink-200 mr-6'>
                 <Link to='/' className='font-semibold text-xl tracking-tight'>Car Logs</Link>
             </div>
